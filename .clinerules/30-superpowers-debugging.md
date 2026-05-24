@@ -13,7 +13,7 @@ Debugging sequence:
 
 Do not guess at fixes before collecting evidence unless the user explicitly asks for a speculative answer.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/systematic-debugging/SKILL.md`
-- `docs/superpowers/skills/verification-before-completion/SKILL.md`
+- `systematic-debugging`
+- `verification-before-completion`

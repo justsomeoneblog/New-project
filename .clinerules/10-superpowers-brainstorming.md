@@ -12,7 +12,7 @@ Before editing files for those tasks:
 
 For tiny, obvious, low-risk changes, keep the design to a few sentences. For larger changes, cover architecture, affected files, data flow, error handling, and verification.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/brainstorming/SKILL.md`
-- `docs/superpowers/skills/writing-plans/SKILL.md`
+- `brainstorming`
+- `writing-plans`

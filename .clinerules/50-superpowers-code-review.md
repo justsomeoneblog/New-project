@@ -12,7 +12,7 @@ Review stance:
 
 If there are no findings, say that clearly and mention remaining test gaps or residual risk.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/requesting-code-review/SKILL.md`
-- `docs/superpowers/skills/receiving-code-review/SKILL.md`
+- `requesting-code-review`
+- `receiving-code-review`

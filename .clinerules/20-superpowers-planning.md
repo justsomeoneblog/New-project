@@ -12,8 +12,8 @@ For multi-step implementation:
 
 Plans should be detailed enough for another Cline task to continue the work, but not padded with process for simple one-file edits.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/writing-plans/SKILL.md`
-- `docs/superpowers/skills/executing-plans/SKILL.md`
-- `docs/superpowers/skills/subagent-driven-development/SKILL.md`
+- `writing-plans`
+- `executing-plans`
+- `subagent-driven-development`

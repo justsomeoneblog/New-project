@@ -16,8 +16,8 @@ Completion guidance:
 2. Report what changed, what was verified, and any remaining risk.
 3. If a PR or branch cleanup is appropriate, ask or follow the user's explicit instruction.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/using-git-worktrees/SKILL.md`
-- `docs/superpowers/skills/finishing-a-development-branch/SKILL.md`
-- `docs/superpowers/skills/verification-before-completion/SKILL.md`
+- `using-git-worktrees`
+- `finishing-a-development-branch`
+- `verification-before-completion`

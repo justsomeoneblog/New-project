@@ -5,6 +5,19 @@ description: Use when executing implementation plans with independent tasks in t
 
 # Subagent-Driven Development
 
+## Cline Adaptation
+
+Cline subagents are read-only. Do not use them to implement, edit files, run formatters, install dependencies, commit, push, or create PRs.
+
+For Cline, adapt this workflow as research-assisted development:
+
+1. Main Cline task reads the plan and owns all edits.
+2. Use `use_subagents` for read-only implementation research, spec review, code quality review, and risk checks.
+3. Each subagent returns evidence, file references, and recommended changes.
+4. Main Cline task evaluates the reports, performs edits, verifies, and commits when authorized.
+
+When the upstream text below says "implementer subagent", interpret it as "research subagent that prepares an implementation report"; the main Cline task performs the implementation.
+
 Execute plan by dispatching fresh subagent per task, with two-stage review after each: spec compliance review first, then code quality review.
 
 **Why subagents:** You delegate tasks to specialized agents with isolated context. By precisely crafting their instructions and context, you ensure they stay focused and succeed at their task. They should never inherit your session's context or history — you construct exactly what they need. This also preserves your own context for coordination work.
@@ -130,7 +143,7 @@ Implementer subagents report one of four statuses. Handle each appropriately:
 ```
 You: I'm using Subagent-Driven Development to execute this plan.
 
-[Read plan file once: docs/superpowers/plans/feature-plan.md]
+[Read plan file once: .cline/superpowers/plans/feature-plan.md]
 [Extract all 5 tasks with full text and context]
 [Create TodoWrite with all tasks]
 

@@ -5,6 +5,12 @@ description: Use when facing 2+ independent tasks that can be worked on without 
 
 # Dispatching Parallel Agents
 
+## Cline Adaptation
+
+In Cline, use the native `use_subagents` tool for this skill. Cline subagents are read-only research agents: they can read files, search, run read-only commands, and use skills, but they cannot edit files, install packages, commit, push, or create PRs.
+
+When the upstream text below says an agent should fix or implement something, adapt it for Cline as: the subagent investigates the focused problem and returns a concrete report with relevant files, evidence, and recommended fix; the main Cline task performs any edits after reviewing the report.
+
 ## Overview
 
 You delegate tasks to specialized agents with isolated context. By precisely crafting their instructions and context, you ensure they stay focused and succeed at their task. They should never inherit your session's context or history — you construct exactly what they need. This also preserves your own context for coordination work.
@@ -65,12 +71,12 @@ Each agent gets:
 
 ### 3. Dispatch in Parallel
 
-```typescript
-// In Claude Code / AI environment
-Task("Fix agent-tool-abort.test.ts failures")
-Task("Fix batch-completion-behavior.test.ts failures")
-Task("Fix tool-approval-race-conditions.test.ts failures")
-// All three run concurrently
+```text
+Use Cline `use_subagents` with one read-only research prompt per independent domain:
+
+1. Investigate agent-tool-abort.test.ts failures and report root cause plus recommended fix.
+2. Investigate batch-completion-behavior.test.ts failures and report root cause plus recommended fix.
+3. Investigate tool-approval-race-conditions.test.ts failures and report root cause plus recommended fix.
 ```
 
 ### 4. Review and Integrate

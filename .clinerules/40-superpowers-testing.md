@@ -12,7 +12,7 @@ Testing guidance:
 
 If adding a test is impractical, explain why and use the strongest available manual or command-line verification.
 
-Reference docs:
+Use these Cline skills when relevant:
 
-- `docs/superpowers/skills/test-driven-development/SKILL.md`
-- `docs/superpowers/skills/verification-before-completion/SKILL.md`
+- `test-driven-development`
+- `verification-before-completion`

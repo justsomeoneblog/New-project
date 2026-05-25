@@ -11,7 +11,7 @@ The kit must remain Cline-native:
 - Slash workflows live in `.clinerules/workflows/`.
 - Windows hooks live in `.clinerules/hooks/`.
 
-Do not reintroduce a passive `docs/superpowers` mirror.
+Do not reintroduce a passive legacy docs mirror for Superpowers.
 
 ## Chosen Scope
 
@@ -119,8 +119,7 @@ After implementation, verify:
 - `.clinerules/workflows/` contains all nine workflows.
 - `.clinerules/hooks/` contains all five PowerShell hooks plus any shared helper.
 - `.cline/skills/` still contains valid Cline skills and `SKILL.md` frontmatter names match directory names.
-- No file references `docs/superpowers`.
+- No active Cline rule, skill, workflow, or hook references the legacy docs mirror path.
 - Hook scripts parse with PowerShell.
 - Hook scripts do not contain destructive filesystem or git commands.
 - Git status is clean after commit.
-

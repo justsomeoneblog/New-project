@@ -5,6 +5,10 @@ description: "You MUST use this before any creative work - creating features, bu
 
 # Brainstorming Ideas Into Designs
 
+## Cline Adaptation
+
+Avoid freezing on approval prompts. If the user already asked for implementation, present the design briefly and continue to the next safe planning step instead of requiring a separate approval reply. Stop and ask only when a missing requirement would make the next action risky or ambiguous.
+
 Help turn ideas into fully formed designs and specs through natural collaborative dialogue.
 
 Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.

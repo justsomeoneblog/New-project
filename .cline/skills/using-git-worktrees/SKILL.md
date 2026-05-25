@@ -5,6 +5,10 @@ description: Use when starting feature work that needs isolation from current wo
 
 # Using Git Worktrees
 
+## Cline Adaptation
+
+Avoid freezing on consent prompts. If the user already requested branch or worktree work, proceed with the safest matching step. If not, work in the current branch and avoid destructive git operations rather than stopping for a separate approval prompt.
+
 ## Overview
 
 Ensure work happens in an isolated workspace. Prefer your platform's native worktree tools. Fall back to manual git worktrees only when no native tool is available.

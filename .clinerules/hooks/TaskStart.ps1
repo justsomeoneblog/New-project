@@ -13,7 +13,7 @@ At task start:
 - Use use_skill for using-superpowers.
 - Use additional Superpowers skills when their descriptions match the task.
 - Use .clinerules/workflows/*.md slash workflows for explicit flows.
-- Cline subagents are read-only research agents; main Cline performs edits.
+- Cline subagents can read files, search the codebase, and find documentation; main Cline performs edits.
 "@
 
 Write-HookResponse -ContextModification $context

@@ -18,6 +18,8 @@ Use verification-before-completion when relevant. Report:
 - The command or inspection used.
 - The result you observed.
 - Remaining risk or missing verification.
+
+Continue with verification when possible.
 "@
   Write-HookResponse -ContextModification $context
   exit 0

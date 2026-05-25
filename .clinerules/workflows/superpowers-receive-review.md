@@ -14,7 +14,7 @@ Workflow:
 1. Activate `using-superpowers`.
 2. Activate `receiving-code-review`.
 3. Read all feedback before reacting.
-4. Restate unclear requirements or ask for clarification.
+4. Restate unclear requirements. If work can proceed safely on independent clear items, continue with those instead of stopping.
 5. Verify each suggestion against the codebase before implementing it.
 6. Push back with technical reasoning when feedback is incorrect or conflicts with project constraints.
 7. Implement one review item at a time.

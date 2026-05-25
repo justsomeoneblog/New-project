@@ -19,11 +19,13 @@ Use these mappings:
 
 - `invoke Skill tool` means call Cline's `use_skill` tool for the relevant skill under `.cline/skills/`.
 - `TodoWrite` means maintain a visible Markdown checklist or use Cline's task UI if available.
-- `subagent` means Cline's read-only `use_subagents` research tool, or a separate Cline task if the user asks for manual `/newtask` splitting.
-- `dispatch agents` means use Cline subagents only for read-only research, or propose independent task prompts when the user wants manual control.
+- `subagent` means Cline's `use_subagents` tool for reading files, searching the codebase, and finding documentation. Subagents must not edit files or run state-changing commands.
+- `dispatch agents` means use Cline subagents for independent read/search/documentation tasks, then have the main Cline task synthesize the results.
 - `implementation action` means file edits, state-changing commands, dependency installs, commits, pushes, and PR creation.
 
 Keep adapted behavior practical. Do not force heavyweight process for trivial read-only answers.
+
+Avoid freezing on human-action prompts. Do not ask the user to take an action unless the task is genuinely blocked. Prefer to continue with a safe read/search/plan step, state the assumption, and keep moving.
 
 ## Cline-Native Superpowers Layout
 
@@ -48,6 +50,6 @@ Available Superpowers workflows:
 - `/superpowers-receive-review.md`
 - `/superpowers-write-skill.md`
 
-Hooks are strict but conditional. They can block dangerous commands and inject warnings before risky operations. If a hook blocks an operation, explain the reason, use the named Superpowers workflow or skill, ask the user for explicit approval when needed, then retry only after the risk is understood.
+Hooks are strict but conditional. They can block truly destructive commands and inject warnings before risky operations. If a hook blocks an operation, report the reason and switch to the safest non-destructive next step, such as reading files, searching documentation, or writing a plan.
 
-For risky commands that were explicitly approved by the user, include a clear marker in the command text such as `# superpowers-approved`. Do not add this marker unless the user has approved the risky operation.
+For risky commands that were already explicitly requested by the user, include a clear marker in the command text such as `# superpowers-approved`. Do not add this marker unless the user has already requested or confirmed that exact risky operation.

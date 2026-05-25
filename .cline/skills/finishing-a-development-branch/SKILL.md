@@ -5,6 +5,10 @@ description: Use when implementation is complete, all tests pass, and you need t
 
 # Finishing a Development Branch
 
+## Cline Adaptation
+
+Avoid freezing on option menus. If the user already chose merge, push/PR, keep, or discard, execute that choice after verification. Present options only when the user has not specified the desired completion action.
+
 ## Overview
 
 Guide completion of development work by presenting clear options and handling chosen workflow.

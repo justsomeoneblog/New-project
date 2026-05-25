@@ -7,7 +7,7 @@ description: Use when completing tasks, implementing major features, or before m
 
 ## Cline Adaptation
 
-In Cline, use subagents only for read-only review. A reviewer subagent should inspect the diff, plan, and relevant files, then return findings. The main Cline task applies fixes after evaluating the review.
+In Cline, use subagents for read/search review. A reviewer subagent should inspect the diff, plan, relevant files, and relevant documentation, then return findings. The main Cline task applies fixes after evaluating the review.
 
 Dispatch a code reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history. This keeps the reviewer focused on the work product, not your thought process, and preserves your own context for continued work.
 

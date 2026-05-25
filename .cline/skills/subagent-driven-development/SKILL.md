@@ -7,12 +7,12 @@ description: Use when executing implementation plans with independent tasks in t
 
 ## Cline Adaptation
 
-Cline subagents are read-only. Do not use them to implement, edit files, run formatters, install dependencies, commit, push, or create PRs.
+Cline subagents are for reading, searching, and documentation lookup. Do not use them to implement, edit files, run formatters, install dependencies, commit, push, or create PRs.
 
 For Cline, adapt this workflow as research-assisted development:
 
 1. Main Cline task reads the plan and owns all edits.
-2. Use `use_subagents` for read-only implementation research, spec review, code quality review, and risk checks.
+2. Use `use_subagents` for documentation lookup, codebase search, implementation research, spec review, code quality review, and risk checks.
 3. Each subagent returns evidence, file references, and recommended changes.
 4. Main Cline task evaluates the reports, performs edits, verifies, and commits when authorized.
 

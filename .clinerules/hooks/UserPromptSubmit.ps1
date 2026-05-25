@@ -20,7 +20,7 @@ Before editing, prefer the matching workflow:
 - Branch/worktree/git setup: /superpowers-branch.md
 - Review or merge readiness: /superpowers-review.md or /superpowers-finish.md
 
-If you continue without a workflow, explicitly explain why the task is small and low-risk.
+Continue with the safest useful next step. If you continue without a workflow, explicitly explain why the task is small and low-risk.
 "@
   Write-HookResponse -ContextModification $context
   exit 0

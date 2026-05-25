@@ -7,7 +7,7 @@ description: Use when facing 2+ independent tasks that can be worked on without 
 
 ## Cline Adaptation
 
-In Cline, use the native `use_subagents` tool for this skill. Cline subagents are read-only research agents: they can read files, search, run read-only commands, and use skills, but they cannot edit files, install packages, commit, push, or create PRs.
+In Cline, use the native `use_subagents` tool for this skill. Cline subagents can read files, search the codebase, find relevant documentation, run read-only inspection commands, and use skills, but they cannot edit files, install packages, commit, push, or create PRs.
 
 When the upstream text below says an agent should fix or implement something, adapt it for Cline as: the subagent investigates the focused problem and returns a concrete report with relevant files, evidence, and recommended fix; the main Cline task performs any edits after reviewing the report.
 
@@ -72,7 +72,7 @@ Each agent gets:
 ### 3. Dispatch in Parallel
 
 ```text
-Use Cline `use_subagents` with one read-only research prompt per independent domain:
+Use Cline `use_subagents` with one read/search/documentation prompt per independent domain:
 
 1. Investigate agent-tool-abort.test.ts failures and report root cause plus recommended fix.
 2. Investigate batch-completion-behavior.test.ts failures and report root cause plus recommended fix.

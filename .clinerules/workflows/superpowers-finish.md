@@ -18,4 +18,4 @@ Workflow:
 6. Check git status before staging or committing.
 7. Stage only task-relevant files.
 8. Commit only after verification evidence is available.
-9. Ask before merge, push, PR creation, or destructive cleanup unless the user already gave explicit instructions.
+9. Merge, push, PR creation, or destructive cleanup should only happen when the user already gave explicit instructions.

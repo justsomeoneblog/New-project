@@ -24,3 +24,30 @@ Use these mappings:
 - `implementation action` means file edits, state-changing commands, dependency installs, commits, pushes, and PR creation.
 
 Keep adapted behavior practical. Do not force heavyweight process for trivial read-only answers.
+
+## Cline-Native Superpowers Layout
+
+This project uses all three Cline customization layers:
+
+- Skills: `.cline/skills/`
+- Rules: `.clinerules/*.md`
+- Workflows: `.clinerules/workflows/*.md`
+- Hooks: `.clinerules/hooks/*.ps1`
+
+Use skills for task-specific behavior, workflows for explicit slash-command flows, rules for persistent guidance, and hooks for deterministic safety checks.
+
+Available Superpowers workflows:
+
+- `/superpowers-plan.md`
+- `/superpowers-debug.md`
+- `/superpowers-review.md`
+- `/superpowers-finish.md`
+- `/superpowers-parallel-research.md`
+- `/superpowers-tdd.md`
+- `/superpowers-branch.md`
+- `/superpowers-receive-review.md`
+- `/superpowers-write-skill.md`
+
+Hooks are strict but conditional. They can block dangerous commands and inject warnings before risky operations. If a hook blocks an operation, explain the reason, use the named Superpowers workflow or skill, ask the user for explicit approval when needed, then retry only after the risk is understood.
+
+For risky commands that were explicitly approved by the user, include a clear marker in the command text such as `# superpowers-approved`. Do not add this marker unless the user has approved the risky operation.
